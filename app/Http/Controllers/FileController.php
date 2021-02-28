@@ -13,7 +13,7 @@ class FileController extends Controller
 
         $content = $request->getContent();
 
-        $token = Str::random();
+        $token = Str::random(5);
 
         Storage::disk('local')->put("public/$token/$fileName", $content);
 
