@@ -17,7 +17,7 @@ class FileController extends Controller
 
         Storage::disk('local')->put("public/$token/$fileName", $content);
 
-        return url('/') . "/$token/" . $fileName;
+        return url('/') . "/$token/" . $fileName . "\n";
     }
 
     public function get(Request $request, $token, $fileName)
